@@ -1,0 +1,26 @@
+const menuBtn = document.querySelector('.menu-btn');
+const humBurger = document.querySelector('.menu-btn__burger');
+const nav = document.querySelector('.nav');
+const menuNav = document.querySelector('.menu-nav');
+const menuItems = document.querySelectorAll('.menu-nav__items');
+
+let showMenu = false;
+
+menuBtn.addEventListener('click', () => {
+        if (!showMenu) {
+            humBurger.classList.add('open');
+            nav.classList.add('open');
+            menuNav.classList.add('open');
+            menuItems.forEach(item => item.classList.add('open'))
+
+            showMenu = true;
+        } else {
+            humBurger.classList.remove('open');
+            nav.classList.remove('open');
+            menuNav.classList.remove('open');
+            menuItems.forEach(item => item.classList.remove('open'))
+
+            showMenu = false;
+        }
+    })
+    // console.log('hgcfgv');
